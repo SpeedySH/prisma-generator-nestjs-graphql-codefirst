@@ -45,27 +45,3 @@ export class User {
   @Field(() => Profile, { nullable: true })
   Profile?: Profile | null;
 }
-
-@ObjectType()
-export class Profile {
-  @Field(() => ID)
-  id: string;
-
-  @Field(() => User)
-  user?: User;
-
-  @Field(() => String)
-  userId: string;
-
-  @Field(() => String, { nullable: true })
-  username: string | null;
-
-  @Field(() => String, { nullable: true })
-  firstName: string | null;
-
-  @Field(() => String, { nullable: true })
-  middleName: string | null;
-
-  @Field(() => String, { nullable: true })
-  lastName: string | null;
-}
