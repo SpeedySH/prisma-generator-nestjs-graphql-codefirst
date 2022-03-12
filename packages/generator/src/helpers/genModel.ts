@@ -27,6 +27,7 @@ export const buildImportsHelper =
 
 const buildBodyHelper = (field: DMMF.Field) => {
   if (typeof field.type === 'string') {
+    // Parse all fields from /// comments
     const layers = new Set(field.documentation?.split('\n'));
 
     const defaultDecoratorAddition =
@@ -83,6 +84,9 @@ export const genModel = ({ name, fields }: DMMF.Model): [Map<string, Set<string>
   for (const field of fields) {
     if (field.isId) {
       addImport('@nestjs/graphql', 'ID');
+    }
+    if (field.documentation?.includes(NEST_GRAPHQL_HIDE_FIELD)) {
+      addImport('@nestjs/graphql', 'HideField');
     }
     // if (field.kind === 'enum') {
     //   addImport('./enums.ts', `${field.type}`);
