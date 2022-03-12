@@ -5,6 +5,8 @@
     "husky": "7.0.4"
   },
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "gen": "cd packages/usage && pnpm prisma generate",
+    "dev": "cd packages/generator && pnpm dev"
   }
 }
