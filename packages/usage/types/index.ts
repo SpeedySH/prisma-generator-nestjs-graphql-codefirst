@@ -3,6 +3,7 @@ import { ObjectType, Field, ID } from '@nestjs/graphql';
 export enum Grands {
   ADMINISTRATOR = 'ADMINISTRATOR',
   USER = 'USER',
+  MODERATOR = 'MODERATOR',
 }
 
 export enum NotificationType {
