@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/MeloncholyShiro/prisma-generator-nestjs-graphql-codefirst/compare/v1.0.1...v1.0.2) (2022-03-13)
+
+
+### Bug Fixes
+
+* fixed null field then field didnt be null ([484c7b4](https://github.com/MeloncholyShiro/prisma-generator-nestjs-graphql-codefirst/commit/484c7b4ffa3cd9eb2fd353b99ca3e9b4a049e052))
+
 ## [1.0.1](https://github.com/MeloncholyShiro/prisma-generator-nestjs-graphql-codefirst/compare/v1.0.0...v1.0.1) (2022-03-12)
 
 
