@@ -44,7 +44,7 @@ const buildBodyHelper = (field: DMMF.Field) => {
 
     if (!layers.has(NEST_GRAPHQL_HIDE_FIELD)) layers.add(fieldDecorator);
 
-    const nullablePropertyAddition = field.isRequired ? '' : ' | null';
+    const nullablePropertyAddition = field.isRequired || field.hasDefaultValue ? '' : ' | null';
     const enumPropertyAddition = field.kind === 'enum' ? `keyof typeof ${field.type}` : '';
     const objectPropertyAddition = field.kind === 'object' ? `${field.type}` : '';
     const scalarPropertyAddition = field.kind === 'scalar' ? `${hashTable[field.type]}` : '';

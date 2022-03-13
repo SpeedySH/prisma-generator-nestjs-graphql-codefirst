@@ -37,10 +37,10 @@ export class User {
   grant: keyof typeof Grands;
 
   @Field(() => Date)
-  createdAt: Date | null;
+  createdAt: Date;
 
   @HideField()
-  updatedAt: Date | null;
+  updatedAt: Date;
 
   @Field(() => Profile, { nullable: true })
   Profile?: Profile | null;
